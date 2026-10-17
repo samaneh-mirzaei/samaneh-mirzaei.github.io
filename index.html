@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Alex Morgan — Software Developer</title>
   <meta name="description" content="Portfolio of Alex Morgan, software developer building clean, accessible web experiences.">
+  <script>try{var t=localStorage.getItem("portfolio-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
@@ -14,10 +15,19 @@
   <header class="site-header">
     <nav class="container nav" aria-label="Main">
       <a class="brand" href="#top" data-site-name>Alex Morgan</a>
-      <ul class="nav-links">
+      <div class="nav-right">
+        <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#resume">Resume</a></li>
       </ul>
+        <div class="theme">
+          <button class="theme-btn" id="theme-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu" aria-label="Change color theme">
+            <span class="swatches" id="theme-current" aria-hidden="true"></span>
+            <span class="theme-label">Theme</span>
+          </button>
+          <div class="theme-menu" id="theme-menu" role="group" aria-label="Color theme" hidden></div>
+        </div>
+      </div>
     </nav>
   </header>
 
