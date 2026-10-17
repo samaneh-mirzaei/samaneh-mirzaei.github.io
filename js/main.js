@@ -1,10 +1,11 @@
 // ===== Editable site configuration =====
 const CONFIG = {
-	name: "Samaneh Mirzaei",
+  name: "Samaneh Mirzaei",
+	nameFa: "سمانه میرزایی",
 	social: {
-		github: "https://github.com/samaneh-mirzaei",
-		linkedin: "https://www.linkedin.com/in/your-username",
-	},
+    github: "https://github.com/samaneh-mirzaei",
+    linkedin: "",
+  },
 };
 
 // ===== Themes (ids match [data-theme] blocks in css/style.css) =====
@@ -104,6 +105,117 @@ function initThemes() {
 	apply(saved, false);
 }
 
+// ===== Language (EN default / FA) =====
+const DEFAULT_LANG = "en";
+const LANG_KEY = "portfolio-lang";
+const FA_THEME_NAMES = {
+  pim: "PIM",
+  halloween: "هالووین",
+  oil: "رنگ روغن",
+  twilight: "گرگ‌ومیش",
+  icecream: "بستنی",
+  latenight: "نیمه‌شب",
+  bittersweet: "تلخ‌وشیرین",
+  mold: "سبزآبی",
+  watermelon: "هندوانه",
+  nightsky: "آسمان شب",
+};
+
+const FA = {
+  "meta.title": `${CONFIG.nameFa} — توسعه‌دهنده هوش مصنوعی و فول‌استک`,
+  "meta.description": `نمونه‌کارهای ${CONFIG.nameFa} در زمینه هوش مصنوعی، توسعه وب و بازی‌سازی.`,
+
+  "a11y.skip": "رفتن به محتوای اصلی",
+  "a11y.mainNav": "ناوبری اصلی",
+  "a11y.language": "انتخاب زبان",
+  "a11y.changeTheme": "تغییر رنگ‌بندی سایت",
+  "a11y.themeMenu": "انتخاب رنگ‌بندی",
+  "a11y.social": "لینک‌های شبکه‌های اجتماعی",
+
+  "nav.about": "درباره من",
+  "nav.resume": "رزومه",
+  "theme.label": "رنگ‌بندی",
+
+  "hero.hello": "سلام، من",
+  "hero.alt": `تصویر ${CONFIG.nameFa}`,
+  "hero.tagline": "از ساخت سیستم‌های هوشمند تا توسعه وب و خلق بازی‌های تعاملی.",
+  "hero.intro": "از تبدیل ایده‌ها به محصولاتی واقعی با کمک کدنویسی لذت می‌برم؛ چه ساخت راهکارهای مبتنی بر هوش مصنوعی و سیستم‌های بک‌اند باشد، چه طراحی رابط‌های کاربری جذاب یا توسعه بازی‌های تعاملی. دوست دارم فناوری‌های مختلف را تجربه کنم، سراغ مسئله‌های چالش‌برانگیز بروم و پروژه‌هایی بسازم که در آن‌ها خلاقیت و فناوری کنار هم قرار می‌گیرند.",
+
+  "about.title": "درباره من",
+  "about.background.title": "سوابق و تجربه‌ها",
+  "about.background.text": "دانشجوی مهندسی کامپیوتر هستم و تجربه کار روی پروژه‌های هوش مصنوعی و توسعه فول‌استک را دارم. از جمله پروژه‌هایم، مدلی مبتنی بر یادگیری عمیق و بینایی کامپیوتر برای تشخیص چهار نوع تومور مغزی با دقت کلی ۹۸٫۹۹ درصد است. همچنین برای یک استارتاپ، روی دو پروژه مبتنی بر RAG (تولید تقویت‌شده با بازیابی اطلاعات) کار کرده‌ام. در کنار این‌ها، بازی‌های کوچک داستان‌محور با سبک پیکسل‌آرت می‌سازم و حدود ۶۰ قالب صفحه وب با HTML، CSS و JavaScript طراحی کرده‌ام.",
+
+  "about.interests.title": "علایق من",
+  "about.interests.text": "هوش مصنوعی و بازی‌سازی دو حوزه‌ای هستند که بیش از همه به آن‌ها علاقه دارم. از هوش مصنوعی برای ساخت ابزارها و برنامه‌های هوشمند استفاده می‌کنم و با ترکیب مهارت‌های فرانت‌اند و بک‌اند، ایده‌هایم را به پروژه‌های واقعی تبدیل می‌کنم. در اوقات فراغت هم بازی می‌کنم، به هنر می‌پردازم و با Blender انیمیشن‌های دوبعدی و مدل‌های سه‌بعدی می‌سازم.",
+
+  "about.skills.title": "مهارت‌ها",
+  "about.skills.linux": "مبانی لینوکس",
+
+  "about.goals.title": "اهداف من",
+  "about.goals.text": "می‌خواهم مسیر حرفه‌ای خودم را در مهندسی هوش مصنوعی و بازی‌سازی ادامه بدهم و سیستم‌های هوشمند را با تجربه‌های خلاقانه و تعاملی ترکیب کنم. یکی از هدف‌هایم این است که ایده بازی‌ای را که مدت‌هاست در ذهن دارم، به یک بازی واقعی تبدیل کنم. همچنین دوست دارم ابزارهای کاربردی برای توسعه‌دهندگان بسازم؛ از جمله پلتفرمی مبتنی بر FastAPI که امکان تست API، پایش عملکرد و شبیه‌سازی درخواست‌ها را در یک محیط واحد فراهم کند. در کنار این اهداف، به دنبال فرصت‌های کارآموزی، موقعیت‌های شغلی و همکاری در پروژه‌های متن‌باز هستم تا بیشتر یاد بگیرم و تجربه کسب کنم.",
+
+  "resume.title": "رزومه",
+  "resume.text": "برای آشنایی بیشتر با سوابق تحصیلی، مهارت‌ها و تجربه‌هایم، می‌توانید رزومه‌ام را دریافت کنید.",
+  "resume.button": "دریافت رزومه (PDF)",
+
+  "footer.rights": " — تمامی حقوق محفوظ است.",
+  "footer.top": "بازگشت به بالای صفحه ↑",
+};
+
+
+function initLang() {
+	const html = document.documentElement;
+	const els = document.querySelectorAll("[data-i18n], [data-i18n-attr]");
+	const pairs = (el) =>
+		(el.dataset.i18nAttr || "").split(",").filter(Boolean).map((p) => p.split(":"));
+	const EN = {};
+	// Remember the English source text from the HTML (once)
+	els.forEach((el) => {
+		const k = el.dataset.i18n;
+		if (k && !(k in EN)) EN[k] = el.textContent.replace(/\s+/g, " ").trim();
+		pairs(el).forEach(([attr, key]) => {
+			if (!(key in EN)) EN[key] = el.getAttribute(attr);
+		});
+	});
+	const tr = (lang, key) => (lang === "fa" && FA[key]) || EN[key];
+
+	function apply(lang, save = true) {
+		if (lang !== "fa") lang = "en";
+		html.lang = lang;
+		html.dir = lang === "fa" ? "rtl" : "ltr";
+    
+    document
+    .querySelectorAll("[data-site-name]")
+    .forEach((el) => (el.textContent = lang === "fa" ? CONFIG.nameFa : CONFIG.name));
+
+		els.forEach((el) => {
+			if (el.dataset.i18n) el.textContent = tr(lang, el.dataset.i18n);
+			pairs(el).forEach(([attr, key]) => el.setAttribute(attr, tr(lang, key)));
+		});
+		// Theme names are created by initThemes(), so update them here
+		document.querySelectorAll(".theme-opt").forEach((b) => {
+			const t = THEMES.find((x) => x.id === b.dataset.theme);
+			if (t) b.firstElementChild.textContent = lang === "fa" ? FA_THEME_NAMES[t.id] || t.name : t.name;
+		});
+		document.querySelectorAll(".lang-btn").forEach((b) =>
+			b.setAttribute("aria-pressed", String(b.dataset.lang === lang)),
+		);
+		if (save)
+			try {
+				localStorage.setItem(LANG_KEY, lang);
+			} catch (e) {}
+	}
+
+	document.querySelectorAll(".lang-btn").forEach((b) =>
+		b.addEventListener("click", () => apply(b.dataset.lang)),
+	);
+	let saved = DEFAULT_LANG;
+	try {
+		saved = localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
+	} catch (e) {}
+	apply(saved, false);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 	document
 		.querySelectorAll("[data-site-name]")
@@ -116,6 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (year) year.textContent = new Date().getFullYear();
 
 	initThemes();
+  initLang();
 
 	// Scroll reveal
 	const items = document.querySelectorAll(
