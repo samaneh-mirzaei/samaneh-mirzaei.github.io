@@ -1,8 +1,8 @@
 // ===== Editable site configuration =====
 const CONFIG = {
-	name: "Alex Morgan",
+	name: "Samaneh Mirzaei",
 	social: {
-		github: "https://github.com/your-username",
+		github: "https://github.com/samaneh-mirzaei",
 		linkedin: "https://www.linkedin.com/in/your-username",
 	},
 };
