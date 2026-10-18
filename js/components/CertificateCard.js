@@ -20,14 +20,16 @@ ${image ? Thumb(image) : ""}
 <p class="kind" ${i18n(kindKey)}>${en(kindKey)}</p>
 <h3>${escapeHtml(title)}</h3>
 ${MetaList([
-	{ labelKey: "d.issuer", value: valueOrPlaceholder(issuer) },
-	{ labelKey: "d.date", value: valueOrPlaceholder(date) },
+	// { labelKey: "d.issuer", value: valueOrPlaceholder(issuer) },
+	// { labelKey: "d.date", value: valueOrPlaceholder(date) }, // commented out by request
+	/*
 	{
 		labelKey: "d.verify",
 		value: verifyUrl
 			? `<a href="${escapeHtml(verifyUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(verifyUrl)}</a>`
 			: Placeholder("d.ph.link"),
 	},
+	*/
 ])}`,
 	});
 }
