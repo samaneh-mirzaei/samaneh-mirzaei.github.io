@@ -5,6 +5,8 @@ export const SKILLS = [
 	"C++",
 	"GDScript",
 	"PHP",
+	"HTML",
+	"CSS",
 	"React",
 	"Tkinter",
 	"pandas",
