@@ -207,7 +207,10 @@ h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; margin: 0 0 .5
 .proj-grid .card h3 { margin: 0; }
 .proj-grid .tags { margin-top: auto; }
 .thumb { aspect-ratio: 16 / 10; width: 100%; display: grid; place-items: center; border-radius: calc(var(--radius) - 6px); background: color-mix(in srgb, var(--primary) 12%, var(--surface)); border: 1.5px dashed color-mix(in srgb, var(--text) 35%, transparent); color: var(--text-muted); font-size: .85rem; }
-img.thumb { object-fit: cover; border-style: solid; }   /* when you add a real image */
+/* When you add a real image: same fixed box as the placeholder (full card width, 16:10),
+   whatever the file's own size. height:auto cancels the HTML height="" attribute and
+   min-height:0 / flex:none stop the flex card from stretching it to the image's height. */
+img.thumb { display: block; height: auto; min-height: 0; max-width: 100%; flex: none; object-fit: cover; object-position: center; border-style: solid; }
 .meta { margin: 0; display: grid; gap: .25rem; font-size: .92rem; color: var(--text-muted); }
 .meta div { display: flex; flex-wrap: wrap; gap: .4rem; }
 .meta dt { font-weight: 600; color: var(--text); }
