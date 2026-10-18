@@ -20,9 +20,12 @@
         <li><a href="#about" data-i18n="nav.about">About</a></li>
         <li><a href="#resume" data-i18n="nav.resume">Resume</a></li>
       </ul>
-        <div class="lang" role="group" aria-label="Language" data-i18n-attr="aria-label:a11y.language">
-          <button class="lang-btn" type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="true">ENG</button>
-          <button class="lang-btn" type="button" data-lang="fa" lang="fa" aria-label="فارسی" aria-pressed="false">FA</button>
+        <div class="lang">
+          <button class="lang-toggle" id="lang-toggle" type="button" role="switch" aria-checked="false" aria-label="Persian language" data-i18n-attr="aria-label:a11y.langSwitch">
+            <span class="lang-opt" aria-hidden="true">ENG</span>
+            <span class="lang-opt" aria-hidden="true">FA</span>
+            <span class="lang-thumb" aria-hidden="true"></span>
+          </button>
         </div>
         <div class="theme">
           <button class="theme-btn" id="theme-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu" aria-label="Change color theme" data-i18n-attr="aria-label:a11y.changeTheme">
@@ -77,6 +80,7 @@
               startup. I also build small story-driven and pixel-art games and have
               created around 60 HTML, CSS, and JavaScript webpage templates.
             </p>
+            <a class="more-link" href="details.html" data-i18n="about.more">Explore projects, case studies &amp; certificates &rarr;</a>
           </div>
 
           <div class="card">
