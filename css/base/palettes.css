@@ -1,0 +1,30 @@
+/* =========================================================
+   PALETTE REFERENCE (raw values; role mappings are in themes.css)
+   Switching sets <html data-theme="id">. To add a theme:
+     1. add a [data-theme="id"] block in base/themes.css
+     2. add an entry in js/data/themes.js
+   ========================================================= */
+/*
+PIM (active default):  #fcfbfc #fcf291 #febcfe #5e4af0 #302534
+HALLOWEEN:  #06060e #361c7d #d34f0d #f99e90
+OIL:        #fbf5ef #f2d3ab #c69fa5 #8b6d9c #494d7e #272744
+TWILIGHT:   #fbbbad #ee8695 #4a7a96 #333f58 #292831
+ICE CREAM:  #7c3f58 #eb6b6f #f9a875 #fff6d3
+LATE NIGHT: #282d3c #5b5d70 #74838c #ffc4b8 #f69197
+BITTER SWEET: #282328 #545c7e #c56981 #a3a29a
+MOLD:       #191b1a #294257 #579c9a #99c9b3
+WATERMELON: #fcdeea #ff4d6d #265935 #012824
+NIGHT SKY:  #131626 #4d4d80 #e6a1cf #ffe6ea
+*/
+:root {
+  --pim-1: #fcfbfc; --pim-2: #fcf291; --pim-3: #febcfe; --pim-4: #5e4af0; --pim-5: #302534;
+  --halloween-1: #06060e; --halloween-2: #361c7d; --halloween-3: #d34f0d; --halloween-4: #f99e90;
+  --oil-1: #fbf5ef; --oil-2: #f2d3ab; --oil-3: #c69fa5; --oil-4: #8b6d9c; --oil-5: #494d7e; --oil-6: #272744;
+  --twilight-1: #fbbbad; --twilight-2: #ee8695; --twilight-3: #4a7a96; --twilight-4: #333f58; --twilight-5: #292831;
+  --icecream-1: #7c3f58; --icecream-2: #eb6b6f; --icecream-3: #f9a875; --icecream-4: #fff6d3;
+  --latenight-1: #282d3c; --latenight-2: #5b5d70; --latenight-3: #74838c; --latenight-4: #ffc4b8; --latenight-5: #f69197;
+  --bittersweet-1: #282328; --bittersweet-2: #545c7e; --bittersweet-3: #c56981; --bittersweet-4: #a3a29a;
+  --mold-1: #191b1a; --mold-2: #294257; --mold-3: #579c9a; --mold-4: #99c9b3;
+  --watermelon-1: #fcdeea; --watermelon-2: #ff4d6d; --watermelon-3: #265935; --watermelon-4: #012824;
+  --nightsky-1: #131626; --nightsky-2: #4d4d80; --nightsky-3: #e6a1cf; --nightsky-4: #ffe6ea;
+}

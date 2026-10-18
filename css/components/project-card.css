@@ -1,0 +1,59 @@
+/* Project + certificate cards (details page) */
+.proj-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr));
+}
+.proj-grid .card { display: flex; flex-direction: column; gap: 0.75rem; }
+.proj-grid .card h3 { margin: 0; }
+.proj-grid .tags { margin-top: auto; }
+
+/* Thumbnail / placeholder box */
+.thumb {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  border-radius: calc(var(--radius) - 6px);
+  background: color-mix(in srgb, var(--primary) 12%, var(--surface));
+  border: 1.5px dashed color-mix(in srgb, var(--text) 35%, transparent);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* Real image: same fixed box as the placeholder (full card width, 16:10),
+   whatever the file's own size. height:auto cancels the HTML height="" attribute
+   and min-height:0 / flex:none stop the flex card from stretching it. */
+img.thumb {
+  display: block;
+  height: auto;
+  min-height: 0;
+  max-width: 100%;
+  flex: none;
+  object-fit: cover;
+  object-position: center;
+  border-style: solid;
+}
+
+/* Key/value list (Role, Links, Issuer, Date…) */
+.meta {
+  margin: 0;
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+.meta div { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.meta dt { font-weight: 600; color: var(--text); }
+.meta dd { margin: 0; }
+
+/* "Certificate" label */
+.kind {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+html[lang="fa"] .kind { letter-spacing: 0; text-transform: none; font-size: 0.9rem; }

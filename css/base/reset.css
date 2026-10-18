@@ -1,0 +1,87 @@
+/* Reset, typography and layout helpers */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.35s, color 0.35s;
+  overflow-x: clip;
+}
+
+img { max-width: 100%; display: block; }
+ul { list-style: none; margin: 0; padding: 0; }
+a { color: var(--primary); }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container {
+  width: min(100% - 2.5rem, var(--max));
+  margin-inline: auto;
+}
+
+/* Skip link */
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--primary);
+  color: var(--on-primary);
+  padding: 0.6rem 1rem;
+  z-index: 100;
+}
+.skip:focus { left: 0; }
+
+/* Small shared text styles */
+.eyebrow {
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--primary);
+  margin: 0 0 0.5rem;
+}
+
+.intro {
+  max-width: 52ch;
+  color: var(--text-muted);
+  margin: 1.2rem 0 1.6rem;
+}
+
+/* Marks info you still need to supply (placeholders) */
+.ph {
+  font-style: italic;
+  border-bottom: 1.5px dashed color-mix(in srgb, var(--primary) 70%, transparent);
+}
+
+/* Button (highlight pill) */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  background: var(--highlight);
+  color: var(--on-highlight);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.25s, background 0.25s;
+}
+.btn:hover { transform: translateY(-3px); filter: brightness(1.08); }

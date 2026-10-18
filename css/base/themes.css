@@ -1,0 +1,157 @@
+/* =========================================================
+   THEMES — role mapping per palette (default: PIM).
+   Roles: bg, surface, text, text-muted, primary (+on-), secondary (decor),
+   highlight (+on-), band (resume block, +on-).
+   Values with a trailing "d" comment are tints/shades derived from the
+   palette for WCAG contrast.
+   ========================================================= */
+:root,
+[data-theme="pim"] {
+  --bg: #fcfbfc;
+  --surface: #ffffff;
+  --text: #302534;
+  --text-muted: #5f5063;
+  --primary: #5e4af0;
+  --on-primary: #fcfbfc;
+  --secondary: #febcfe;
+  --highlight: #fcf291;
+  --on-highlight: #302534;
+  --band: #302534;
+  --on-band: #fcfbfc;
+  color-scheme: light;
+}
+
+[data-theme="halloween"] {
+  --bg: #06060e;
+  --surface: #150f2e /*d*/;
+  --text: #fbe4de /*d*/;
+  --text-muted: #d0a9a2 /*d*/;
+  --primary: #f99e90;
+  --on-primary: #06060e;
+  --secondary: #d34f0d;
+  --highlight: #f99e90;
+  --on-highlight: #06060e;
+  --band: #361c7d;
+  --on-band: #fbe4de /*d*/;
+  color-scheme: dark;
+}
+
+[data-theme="oil"] {
+  --bg: #fbf5ef;
+  --surface: #fffdf9 /*d*/;
+  --text: #272744;
+  --text-muted: #494d7e;
+  --primary: #75578a /*d*/;
+  --on-primary: #fbf5ef;
+  --secondary: #c69fa5;
+  --highlight: #f2d3ab;
+  --on-highlight: #272744;
+  --band: #272744;
+  --on-band: #fbf5ef;
+  color-scheme: light;
+}
+
+[data-theme="twilight"] {
+  --bg: #292831;
+  --surface: #333f58;
+  --text: #fde4dc /*d*/;
+  --text-muted: #fbbbad;
+  --primary: #ee8695;
+  --on-primary: #292831;
+  --secondary: #4a7a96;
+  --highlight: #fbbbad;
+  --on-highlight: #292831;
+  --band: #fbbbad;
+  --on-band: #292831;
+  color-scheme: dark;
+}
+
+[data-theme="icecream"] {
+  --bg: #fff6d3;
+  --surface: #fffcf0 /*d*/;
+  --text: #7c3f58;
+  --text-muted: #94566f /*d*/;
+  --primary: #b83f4c /*d*/;
+  --on-primary: #fff6d3;
+  --secondary: #eb6b6f;
+  --highlight: #f9a875;
+  --on-highlight: #5a2840 /*d*/;
+  --band: #7c3f58;
+  --on-band: #fff6d3;
+  color-scheme: light;
+}
+
+[data-theme="latenight"] {
+  --bg: #282d3c;
+  --surface: #343a4d /*d*/;
+  --text: #ffe9e4 /*d*/;
+  --text-muted: #ffc4b8;
+  --primary: #f69197;
+  --on-primary: #282d3c;
+  --secondary: #74838c;
+  --highlight: #ffc4b8;
+  --on-highlight: #282d3c;
+  --band: #ffc4b8;
+  --on-band: #282d3c;
+  color-scheme: dark;
+}
+
+[data-theme="bittersweet"] {
+  --bg: #282328;
+  --surface: #332d33 /*d*/;
+  --text: #ece9e1 /*d*/;
+  --text-muted: #a3a29a;
+  --primary: #d9809a /*d*/;
+  --on-primary: #282328;
+  --secondary: #545c7e;
+  --highlight: #a3a29a;
+  --on-highlight: #282328;
+  --band: #545c7e;
+  --on-band: #ece9e1 /*d*/;
+  color-scheme: dark;
+}
+
+[data-theme="mold"] {
+  --bg: #191b1a;
+  --surface: #294257;
+  --text: #e6f4ed /*d*/;
+  --text-muted: #b2cfc2 /*d*/;
+  --primary: #99c9b3;
+  --on-primary: #191b1a;
+  --secondary: #579c9a;
+  --highlight: #99c9b3;
+  --on-highlight: #191b1a;
+  --band: #579c9a;
+  --on-band: #191b1a;
+  color-scheme: dark;
+}
+
+[data-theme="watermelon"] {
+  --bg: #fcdeea;
+  --surface: #fff5f9 /*d*/;
+  --text: #012824;
+  --text-muted: #265935;
+  --primary: #c01e45 /*d*/;
+  --on-primary: #fff5f9;
+  --secondary: #ff4d6d;
+  --highlight: #ff4d6d;
+  --on-highlight: #012824;
+  --band: #012824;
+  --on-band: #fcdeea;
+  color-scheme: light;
+}
+
+[data-theme="nightsky"] {
+  --bg: #131626;
+  --surface: #1e2138 /*d*/;
+  --text: #ffe6ea;
+  --text-muted: #e6a1cf;
+  --primary: #e6a1cf;
+  --on-primary: #131626;
+  --secondary: #4d4d80;
+  --highlight: #e6a1cf;
+  --on-highlight: #131626;
+  --band: #4d4d80;
+  --on-band: #ffe6ea;
+  color-scheme: dark;
+}

@@ -1,0 +1,51 @@
+/* Site header + main navigation */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0.9rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 3px;
+  background: linear-gradient(var(--primary), var(--primary)) 0 100% / 0 2px no-repeat;
+  transition: background-size 0.3s;
+}
+.nav-links a:hover { background-size: 100% 2px; }
+
+/* RTL: underline grows from the right, skip link flips sides */
+html[dir="rtl"] .nav-links a { background-position: 100% 100%; }
+html[dir="rtl"] .skip { left: auto; right: -999px; }
+html[dir="rtl"] .skip:focus { right: 0; }

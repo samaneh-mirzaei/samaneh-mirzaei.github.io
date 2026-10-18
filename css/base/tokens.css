@@ -1,0 +1,9 @@
+/* Theme-independent design tokens */
+:root {
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --radius: 16px;
+  --max: 1080px;
+  --border: color-mix(in srgb, var(--text) 14%, transparent);
+  --shadow: 0 10px 30px -12px color-mix(in srgb, var(--primary) 45%, transparent);
+}

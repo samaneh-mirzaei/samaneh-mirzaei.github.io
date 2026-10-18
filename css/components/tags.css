@@ -1,0 +1,11 @@
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.tags li {
+  background: var(--highlight);
+  color: var(--on-highlight);
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  unicode-bidi: plaintext; /* stops "C++" rendering as "++C" */
+}

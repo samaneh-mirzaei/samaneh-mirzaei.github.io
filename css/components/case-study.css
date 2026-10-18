@@ -1,0 +1,11 @@
+.case-grid { display: grid; gap: 1.5rem; }
+
+.case h3 { margin-bottom: 0; }
+.case dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.9rem 2rem;
+  margin: 1.25rem 0 0;
+}
+.case dt { font-weight: 700; color: var(--primary); }
+.case dd { margin: 0; color: var(--text-muted); }

@@ -1,0 +1,53 @@
+/* Language switch (ENG / FA) */
+.lang {
+  display: flex;
+  direction: ltr; /* keeps ENG on the left and FA on the right in both languages */
+}
+
+.lang-toggle {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.65;
+  color: var(--on-highlight);
+  background: var(--highlight);
+  border: 0;
+  padding: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+.lang-toggle:hover { filter: brightness(1.1); }
+.lang-toggle:focus-visible { outline-offset: 3px; border-radius: 999px; }
+
+.lang-opt {
+  position: relative;
+  z-index: 1;
+  min-width: 3.1rem;
+  padding: 0.45rem 0.75rem;
+  text-align: center;
+  transition: color 0.25s;
+}
+
+.lang-thumb {
+  position: absolute;
+  z-index: 0;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  width: calc(50% - 3px);
+  border-radius: 999px;
+  background: var(--on-highlight);
+  transition: transform 0.25s ease;
+}
+.lang-toggle[aria-checked="true"] .lang-thumb { transform: translateX(100%); }
+
+/* the selected side sits on the dark thumb, so it takes the light colour */
+.lang-toggle[aria-checked="false"] .lang-opt:first-child,
+.lang-toggle[aria-checked="true"] .lang-opt:nth-child(2) {
+  color: var(--highlight);
+}
