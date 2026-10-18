@@ -12,7 +12,7 @@ export const PROJECTS = [
 			alt: "Screenshot of the brain tumor classification project",
 		},
 		tags: ["Deep Learning", "Computer Vision", "Keras", "PyTorch"],
-		role: null,
+		role: "Model designer, application developer",
 		links: null,
 	},
 	{
@@ -22,7 +22,7 @@ export const PROJECTS = [
 			alt: "Screenshot of the RAG assistant built on science articles",
 		},
 		tags: ["RAG", "Tkinter", "LLM", "Python"],
-		role: null,
+		role: "RAG pipeline designer & developer",
 		links: null,
 	},
 	{
@@ -32,7 +32,7 @@ export const PROJECTS = [
 			alt: "Screenshot of the RAG assistant built on Khamenei.ir content",
 		},
 		tags: ["RAG", "Flask", "LLM", "Python"],
-		role: null,
+		role: "RAG pipeline designer & developer, Project Manager, Web developer",
 		links: null,
 	},
 	{
@@ -42,7 +42,7 @@ export const PROJECTS = [
 			alt: "Screenshot of a pixel-art game",
 		},
 		tags: [], // empty -> "[Add technologies]" placeholder
-		role: null,
+		role: "Game Developer, 2D Animator",
 		links: null,
 	},
 	{
@@ -52,7 +52,7 @@ export const PROJECTS = [
 			alt: "Preview of one of the HTML, CSS and JavaScript webpage templates",
 		},
 		tags: ["HTML", "CSS", "JavaScript"],
-		role: null,
+		role: "Frontend Developer",
 		links: null,
 	},
 ];
