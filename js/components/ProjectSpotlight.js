@@ -1,4 +1,4 @@
-import { PROJECTS } from '../data/projects.js';
+import { ORDERED_PROJECTS as PROJECTS } from '../data/projectCategories.js';
 import { i18n,en,i18nAttr } from '../i18n/markup.js';
 import { escapeHtml } from '../utils/html.js';
 

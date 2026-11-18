@@ -1,5 +1,5 @@
 import { LANG_EVENT } from '../config.js';
-import { PROJECTS } from '../data/projects.js';
+import { ORDERED_PROJECTS as PROJECTS } from '../data/projectCategories.js';
 import { translate } from '../i18n/translate.js';
 
 /** Manual carousel: arrows, choices, hover, keyboard, wheel and touch. No autoplay. */

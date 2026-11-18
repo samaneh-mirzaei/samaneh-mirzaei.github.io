@@ -7,7 +7,7 @@ export function initProjectHeights(){
   let pending=false,lastWidth=0;
   function measure(){
     pending=false;
-    const mediaWidths=[...section.querySelectorAll('.project-image')].map(el=>el.getBoundingClientRect().width);
+    const mediaWidths=[...section.querySelectorAll('.project-card .project-image')].map(el=>el.getBoundingClientRect().width);
     if(mediaWidths.length)section.style.setProperty('--project-media-width',Math.min(...mediaWidths)+'px');
     ['--project-tags-height','--project-meta-height','--category-heading-height'].forEach(key=>section.style.removeProperty(key));
     const maxHeight=selector=>Math.ceil(Math.max(0,...[...section.querySelectorAll(selector)].map(el=>el.getBoundingClientRect().height)));

@@ -1,4 +1,4 @@
-import { PROJECTS } from '../data/projects.js';
+import { ORDERED_PROJECTS as PROJECTS } from '../data/projectCategories.js';
 import { PROJECT_CATEGORIES } from '../data/projectCategories.js';
 import { Section } from '../components/Section.js';
 import { ProjectCard } from '../components/ProjectCard.js';
@@ -13,6 +13,6 @@ export const Projects=()=>Section({
   </nav>
   <div class="project-category-grid">
   ${PROJECT_CATEGORIES.map(({id,key})=>`<section class="project-category" id="projects-${id}" aria-labelledby="projects-${id}-title"><h3 id="projects-${id}-title" ${i18n(key)}>${en(key)}</h3><div class="proj-grid">${PROJECTS.map((project,index)=>project.category===id?ProjectCard(project,index):'').join('')}</div></section>`).join('')}
-  ${CreativeWork()}
+  ${CreativeWork(PROJECTS.length)}
   </div>`
 });

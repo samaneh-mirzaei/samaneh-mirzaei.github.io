@@ -6,6 +6,8 @@ A bilingual English/Persian developer portfolio built with HTML, CSS, and vanill
 
 ## Project categories
 
+Project badges follow the displayed category order (01–09, including both Blender works). The software spotlight follows the same software-project order. Blender media uses the same padded image frames and numbered badges as software cards.
+
 On tablet, category rows follow their own content height. On mobile, stacked categories and cards use natural heights, without desktop alignment spacers.
 
 All work lives under Projects in six bordered category blocks: AI & machine learning, backend, frontend, games, desktop tools, and 3D & animation. Blocks sit side by side, share the tallest block’s height, and stack on mobile. AI and artwork use wider blocks. Category jump links provide navigation. Assign each software project a `category` in `js/data/projects.js`; labels and ordering live in `js/data/projectCategories.js`.
