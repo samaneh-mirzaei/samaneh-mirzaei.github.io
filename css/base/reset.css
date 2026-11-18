@@ -1,87 +1,157 @@
-/* Reset, typography and layout helpers */
-*, *::before, *::after { box-sizing: border-box; }
+*,*::before,*::after {
+  box-sizing:border-box
+}
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-behavior:smooth;
+  scroll-padding-top:0
 }
 
 body {
-  margin: 0;
-  font-family: var(--font);
-  font-size: 1.0625rem;
-  line-height: 1.65;
-  color: var(--text);
-  background: var(--bg);
-  -webkit-font-smoothing: antialiased;
-  transition: background-color 0.35s, color 0.35s;
-  overflow-x: clip;
+  margin:0;
+  padding-block-start:var(--header-height);
+  font:16px/1.65 var(--font);
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased
 }
 
-img { max-width: 100%; display: block; }
-ul { list-style: none; margin: 0; padding: 0; }
-a { color: var(--primary); }
-
-h1, h2, h3 {
-  font-family: var(--font-display);
-  line-height: 1.15;
-  margin: 0 0 0.5em;
+img {
+  display:block;
+  max-width:100%
 }
 
-:focus-visible {
-  outline: 3px solid var(--primary);
-  outline-offset: 3px;
-  border-radius: 4px;
+ul {
+  list-style:none;
+  margin:0;
+  padding:0
+}
+
+a {
+  color:inherit;
+  text-underline-offset:4px
+}
+
+button {
+  font:inherit;
+  cursor:pointer
+}
+
+button,a {
+  -webkit-tap-highlight-color:transparent
+}
+
+h1,h2,h3 {
+  font-family:var(--font-display);
+  line-height:1.04;
+  margin:0;
+  font-weight:600;
+  overflow-wrap:break-word
+}
+
+p {
+  margin:0
+}
+
+button:focus-visible,a:focus-visible {
+  outline:3px solid var(--text);
+  outline-offset:5px
 }
 
 .container {
-  width: min(100% - 2.5rem, var(--max));
-  margin-inline: auto;
+  width:min(calc(100% - 64px),var(--max));
+  margin-inline:auto
 }
 
-/* Skip link */
+section[id],article[id],h2[id],#main {
+  scroll-margin-top:calc(var(--header-height) + 24px)
+}
+
 .skip {
-  position: absolute;
-  left: -999px;
-  top: 0;
-  background: var(--primary);
-  color: var(--on-primary);
-  padding: 0.6rem 1rem;
-  z-index: 100;
+  position:fixed;
+  inset-inline-start:16px;
+  top:8px;
+  z-index:2000;
+  background:var(--highlight);
+  color:var(--on-highlight);
+  padding:12px 20px;
+  border:2px solid currentColor;
+  transform:translateY(-160%)
 }
-.skip:focus { left: 0; }
 
-/* Small shared text styles */
+.skip:focus {
+  transform:none
+}
+
 .eyebrow {
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  color: var(--primary);
-  margin: 0 0 0.5rem;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-block-end:24px
+}
+
+.square-dot {
+  width:12px;
+  height:12px;
+  background:var(--secondary);
+  border:2px solid var(--text);
+  flex:none
 }
 
 .intro {
-  max-width: 52ch;
-  color: var(--text-muted);
-  margin: 1.2rem 0 1.6rem;
+  max-width:52ch;
+  color:var(--text-muted)
 }
 
-/* Marks info you still need to supply (placeholders) */
 .ph {
-  font-style: italic;
-  border-bottom: 1.5px dashed color-mix(in srgb, var(--primary) 70%, transparent);
+  font-style:normal;
+  color:var(--text-muted)
 }
 
-/* Button (highlight pill) */
 .btn {
-  display: inline-block;
-  padding: 0.9rem 1.8rem;
-  border-radius: 999px;
-  background: var(--highlight);
-  color: var(--on-highlight);
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.25s, background 0.25s;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:24px;
+  min-height:52px;
+  padding:12px 24px;
+  background:var(--highlight);
+  color:var(--on-highlight);
+  border:2px solid var(--text);
+  box-shadow:4px 4px 0 var(--text);
+  text-transform:uppercase;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.02em;
+  text-decoration:none;
+  transition:transform 160ms var(--ease),box-shadow 160ms var(--ease)
 }
-.btn:hover { transform: translateY(-3px); filter: brightness(1.08); }
+
+.btn:hover {
+  transform:translate(-2px,-2px);
+  box-shadow:6px 6px 0 var(--text)
+}
+
+.btn:active {
+  transform:translate(3px,3px);
+  box-shadow:1px 1px 0 var(--text)
+}
+
+.btn-secondary {
+  background:var(--surface);
+  color:var(--text)
+}
+
+.directional {
+  font-size:22px;
+  line-height:1
+}
+
+::selection {
+  background:var(--highlight);
+  color:var(--on-highlight)
+}

@@ -27,7 +27,7 @@ export function initThemes() {
 	});
 
 	function applyTheme(id, save = true) {
-		const theme = ENABLED_THEMES.find((t) => t.id === id) || ENABLED_THEMES[0];
+		const theme = ENABLED_THEMES.find((t) => t.id === id) || ENABLED_THEMES.find((t) => t.id === DEFAULT_THEME) || ENABLED_THEMES[0];
 		document.documentElement.dataset.theme = theme.id;
 		current.innerHTML = swatches(theme.colors);
 		options.forEach((o) =>

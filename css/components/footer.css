@@ -1,17 +1,32 @@
 .site-footer {
-  border-top: 1px solid var(--border);
-  padding-block: 2rem;
-  margin-top: 2rem;
+  background:var(--text);
+  color:var(--bg);
+  padding-block:32px
 }
 
 .footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.25rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  font-size:12px
 }
-.footer-inner p { margin: 0; color: var(--text-muted); font-size: 0.95rem; }
 
-.to-top { font-weight: 600; text-decoration: none; }
-.to-top:hover { text-decoration: underline; }
+.site-footer .social {
+  margin-inline-start:auto
+}
+
+.site-footer .icon-link {
+  color:var(--bg);
+  background:var(--text);
+  border-color:var(--bg);
+  box-shadow:none
+}
+
+.to-top {
+  font-weight:600
+}
+
+.site-footer a:focus-visible {
+  outline-color:var(--bg)
+}

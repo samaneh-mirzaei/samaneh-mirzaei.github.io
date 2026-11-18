@@ -1,10 +1,15 @@
 .card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.75rem;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background:var(--surface);
+  border:2px solid var(--text);
+  padding:24px;
+  box-shadow:6px 6px 0 var(--text);
+  min-width:0
 }
-.card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.card h3 { font-size: 1.3rem; color: var(--primary); }
-.card p { margin: 0; color: var(--text-muted); }
+
+.card h3 {
+  font-size:28px
+}
+
+.card p {
+  color:var(--text-muted)
+}

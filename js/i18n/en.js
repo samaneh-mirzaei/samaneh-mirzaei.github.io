@@ -3,6 +3,36 @@
 import { CONFIG } from "../config.js";
 
 export const EN = {
+  "d.p7.title": "Basalam Marketplace API",
+  "d.p7.desc": "A Basalam-inspired marketplace backend built as a bootcamp project. Includes JWT authentication, role-based access, product search, carts, and wallet checkout. Stock updates, wallet debits, and orders commit together, with duplicate-checkout protection.",
+  "d.p7.role": "Backend developer",
+  "spotlight.label": "Project spotlight",
+  "spotlight.browse": "Project preview. Use arrow keys, scroll, or swipe to browse.",
+  "spotlight.previous": "Previous project",
+  "spotlight.next": "Next project",
+  "spotlight.choose": "Choose a project",
+  "spotlight.help": "Hover a number, scroll, or use the arrows",
+	"brand.label": CONFIG.name,
+	"nav.contact": "Contact",
+	"nav.menu": "Menu",
+	"hero.profession": "AI & full-stack developer",
+	"hero.game": "& game developer",
+	"hero.projects": "Explore projects",
+	"hero.contact": "Get in touch",
+	"hero.featured": "Project spotlight / 06",
+	"hero.workAlt": "SafePlay Companion dashboard showing playback controls, guide search and content filters",
+	"hero.note": "From AI systems to playable worlds",
+	"skills.intro": "The languages, frameworks, and tools behind my work",
+	"skills.languages": "Programming languages",
+	"skills.frontend": "Frontend development",
+	"skills.backend": "Backend development",
+	"skills.ai": "AI & machine learning",
+	"skills.games": "Game development",
+	"skills.tools": "Tools & technologies",
+	"contact.label": "Have a project in mind?",
+	"contact.title": "Let’s build something.",
+	"contact.text": "Open to internships, full-time roles, and open-source collaborations. Tell me what you’re working on.",
+	"contact.cta": "Send me an email",
 	// ----- Document meta -----
 	"meta.title": `${CONFIG.name} — AI & Full-Stack Developer | Game Developer`,
 	"meta.description": `Portfolio of ${CONFIG.name}, an AI and full-stack developer and game developer exploring intelligent systems, web technologies, and interactive experiences.`,
@@ -26,12 +56,12 @@ export const EN = {
 	"theme.label": "Theme",
 
 	// ----- Hero -----
-	"hero.hello": "Hello, I'm",
+	"hero.hello": "AI, web & game development",
 	"hero.alt": `Portrait of ${CONFIG.name}`,
 	"hero.tagline":
-		"Building intelligent systems, full-stack applications, and interactive game experiences.",
+		"From AI systems to playable worlds",
 	"hero.intro":
-		"I enjoy bringing ideas to life through code, from AI-powered solutions and backend systems to engaging frontend interfaces and interactive games. I love exploring different areas of software development, solving challenging problems, and building projects that combine creativity with technology.",
+		"I'm a Computer Engineering student building AI applications, full-stack systems, and story-driven games. My work spans computer vision, retrieval-augmented generation, and tools for everyday use.",
 
 	// ----- About -----
 	"about.title": "About",
@@ -52,7 +82,7 @@ export const EN = {
 	"resume.title": "Resume",
 	"resume.text":
 		"Want the full picture? Download my resume for details on experience and education.",
-	"resume.button": "Download Resume (PDF)",
+	"resume.button": "Download resume (PDF)",
 
 	// ----- Footer -----
 	"footer.rights": ". All rights reserved.",
@@ -81,6 +111,9 @@ export const EN = {
 	"d.p5.title": "RAG Assistant for Khamenei.ir Content",
 	"d.p5.desc":
 		"A RAG system built for a startup, using content from the Khamenei.ir website and implemented with Flask.",
+	"d.p6.title": "SafePlay Companion",
+	"d.p6.desc": "A Windows companion for mpv that reads parental guides and skips selected scenes using timestamped intervals. Supports movie and episode guides, manual scene editing, and edition confirmation before automatic skipping. It does not analyze video or audio.",
+	"d.p6.role": "Desktop application developer",
 	"d.role": "Role:",
 	"d.links": "Links:",
 

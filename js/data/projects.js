@@ -55,4 +55,24 @@ export const PROJECTS = [
 		role: "Frontend Developer",
 		links: null,
 	},
+	{
+		key: "d.p6",
+		image: {
+			src: "assets/projects/safeplay-dashboard.png",
+			alt: "SafePlay Companion dashboard with mpv playback status, guide search and content filters",
+		},
+		tags: ["Python", "PySide6", "mpv JSON IPC", "Windows"],
+		roleKey: "d.p6.role",
+		links: [{ label: "GitHub", url: "https://github.com/samaneh-mirzaei/safeplay-companion" }],
+	},
+	{
+		key: "d.p7",
+		image: {
+			src: "assets/projects/basalam-api-docs.png",
+			alt: "Basalam Marketplace Swagger documentation showing customer, authentication and administration endpoints",
+		},
+		tags: ["Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "Alembic"],
+		roleKey: "d.p7.role",
+		links: [{ label: "GitHub", url: "https://github.com/samaneh-mirzaei/basalam-clone" }],
+	},
 ];

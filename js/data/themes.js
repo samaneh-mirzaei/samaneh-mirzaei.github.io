@@ -1,6 +1,7 @@
 // Theme ids match the [data-theme="..."] blocks in css/base/themes.css.
 // Set `enabled: false` to hide a theme from the menu without deleting it.
 export const THEMES = [
+  { id: "neo", name: "Neo", nameFa: "نئو", colors: ["#F5F0E6", "#C6FF00", "#FF5A36", "#151515"] },
 	{
 		id: "pim",
 		name: "PIM",

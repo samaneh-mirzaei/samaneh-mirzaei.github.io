@@ -4,6 +4,7 @@ import { PageShell } from "../components/PageShell.js";
 import { PageHero } from "../sections/PageHero.js";
 import { Projects } from "../sections/Projects.js";
 import { CaseStudies } from "../sections/CaseStudies.js";
+import { Contact } from "../sections/Contact.js";
 import { Learning } from "../sections/Learning.js";
 
 export const DetailsPage = () =>
@@ -13,6 +14,6 @@ export const DetailsPage = () =>
 			PageHero() +
 			Projects() +
 			(FEATURES.caseStudies ? CaseStudies() : "") +
-			Learning(),
+			Learning() + Contact(),
 		footer: { showBackLink: true },
 	});

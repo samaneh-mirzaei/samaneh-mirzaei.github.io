@@ -2,6 +2,7 @@
 export const CONFIG = {
 	name: "Samaneh Mirzaei",
 	nameFa: "سمانه میرزایی",
+	email: "samaneh1385.2.13@gmail.com",
 	social: {
 		github: "https://github.com/samaneh-mirzaei",
 		linkedin: "",

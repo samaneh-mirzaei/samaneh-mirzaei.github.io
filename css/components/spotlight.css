@@ -1,0 +1,21 @@
+.spotlight { min-width:0; }
+.spotlight-stage { touch-action:pan-y; }
+.spotlight-slide[hidden] { display:none; }
+.spotlight-slide img { width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; background:var(--surface); }
+.spotlight .work-caption { display:grid; grid-template-rows:48px 20px; gap:8px; min-height:112px; align-content:center; }
+.spotlight .work-caption strong { font-size:18px; font-weight:600; line-height:1.35; }
+.spotlight .work-caption>span { font:12px/20px var(--font); }
+.spotlight-controls { display:grid; grid-template-columns:40px minmax(0,1fr) 40px; align-items:center; gap:12px; margin-block-start:24px; }
+.spotlight-choices { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:4px; min-width:0; }
+.spotlight-choice, .spotlight-arrow { display:grid; place-items:center; min-width:0; height:40px; padding:4px; border:1px solid var(--text); background:var(--surface); color:var(--text); font:500 13px/1 var(--font); transition:background-color 160ms var(--ease),color 160ms var(--ease); }
+.spotlight-choice { flex:1 0 28px; max-width:40px; font-variant-numeric:tabular-nums; }
+.spotlight-choice[aria-pressed="true"] { background:var(--highlight); color:var(--on-highlight); border-width:2px; }
+.spotlight-choice:hover, .spotlight-arrow:hover { background:var(--text); color:var(--bg); }
+.spotlight-help { margin-block-start:12px; font-size:12px; color:var(--text-muted); }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
+@media(max-width:480px) {
+  .spotlight-controls { gap:8px; grid-template-columns:36px minmax(0,1fr) 36px; }
+  .spotlight-arrow, .spotlight-choice { height:36px; }
+  .spotlight .work-caption strong { font-size:16px; }
+  .spotlight .work-caption { grid-template-rows:64px 20px; min-height:124px; }
+}

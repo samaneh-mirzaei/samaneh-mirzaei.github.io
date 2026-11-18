@@ -18,6 +18,7 @@
 @import url("components/theme-switcher.css");
 @import url("components/lang-switcher.css");
 @import url("components/hero.css");
+@import url("components/spotlight.css");
 @import url("components/social.css");
 @import url("components/section.css");
 @import url("components/card.css");
@@ -28,6 +29,7 @@
 @import url("components/page-hero.css");
 @import url("components/project-card.css");
 @import url("components/case-study.css");
+@import url("components/contact.css");
 
 /* Overrides */
 @import url("rtl.css");

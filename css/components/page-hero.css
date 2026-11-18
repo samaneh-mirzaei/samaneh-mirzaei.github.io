@@ -1,17 +1,22 @@
-/* Top block of the details page */
 .page-hero {
-  padding-block: clamp(3rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
+  padding-block:64px
 }
+
 .page-hero h1 {
-  font-size: clamp(2.2rem, 6vw, 3.75rem);
-  letter-spacing: -0.02em;
-  max-width: 18ch;
+  font-size:clamp(44px,6vw,80px);
+  max-width:18ch;
+  letter-spacing:-.05em;
+  margin-block-end:24px
+}
+
+.page-hero .intro {
+  max-width:60ch
 }
 
 .back {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-  text-decoration: none;
+  display:inline-block;
+  margin-block-end:32px;
+  font-size:12px;
+  font-weight:600;
+  text-transform:uppercase
 }
-.back:hover { text-decoration: underline; }

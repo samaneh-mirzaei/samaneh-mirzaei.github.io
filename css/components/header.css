@@ -1,51 +1,77 @@
-/* Site header + main navigation */
 .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
+  position:fixed;
+  top:0;
+  inset-inline:0;
+  width:100%;
+  z-index:1000;
+  background:var(--bg);
+  border-bottom:3px solid var(--text);
+  box-shadow:0 4px 0 var(--text)
 }
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-block: 0.9rem;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  min-height:84px;
+  padding-block:16px
 }
 
 .brand {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--text);
-  text-decoration: none;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  line-height:1.2;
+  flex-shrink:0
+}
+
+.brand-mark {
+  display:flex;
+  align-items:center;
+  gap:2px;
+  background:var(--highlight);
+  color:var(--on-highlight);
+  border:2px solid var(--text);
+  padding:8px;
+  font-size:18px;
+  font-family:var(--font-display);
+  line-height:1
+}
+
+.brand-mark>span {
+  font:16px Arial
 }
 
 .nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 1.5rem;
+  display:flex;
+  align-items:center;
+  gap:24px
 }
 
 .nav-links a {
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 500;
-  padding-bottom: 3px;
-  background: linear-gradient(var(--primary), var(--primary)) 0 100% / 0 2px no-repeat;
-  transition: background-size 0.3s;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  text-decoration:none;
+  padding-block:8px;
+  border-bottom:2px solid transparent
 }
-.nav-links a:hover { background-size: 100% 2px; }
 
-/* RTL: underline grows from the right, skip link flips sides */
-html[dir="rtl"] .nav-links a { background-position: 100% 100%; }
-html[dir="rtl"] .skip { left: auto; right: -999px; }
-html[dir="rtl"] .skip:focus { right: 0; }
+.nav-links a:hover {
+  border-color:var(--text)
+}
+
+.nav-tools {
+  display:flex;
+  gap:12px;
+  align-items:center
+}
+
+.menu-toggle {
+  display:none
+}

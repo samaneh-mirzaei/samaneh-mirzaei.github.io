@@ -1,181 +1,115 @@
-# Personal Portfolio Website
+# Samaneh Mirzaei — Portfolio
 
-A modern, responsive, bilingual (English / Persian) personal portfolio built with HTML, CSS, and vanilla JavaScript. Originally created for my own introduction page, this project is also available for anyone who wants to create and customize their own portfolio.
+A bilingual English/Persian developer portfolio built with HTML, CSS, and vanilla JavaScript ES modules. The site presents AI, web, game-development, and desktop projects in a Neo-Brutalist layout, with a fixed header, an interactive project spotlight, and a responsive project grid.
 
-**Make it yours!** Change the colors, content, profile picture, social links, resume, projects, and styling to create a website that reflects your own personality.
+[Live website](https://samaneh-mirzaei.github.io) · [راهنمای فارسی](README.fa.md)
 
-🌐 **Live Demo:** [samaneh-mirzaei.github.io](https://samaneh-mirzaei.github.io)
+## Current features
 
-## Features
+- **PIM by default:** PIM is used on first visit and when storage is unavailable. A saved theme choice takes priority. The theme picker offers nine active themes; Oil and Late Night remain disabled palette references.
+- **English and Persian:** Text, theme names, and accessibility labels switch together. Persian uses a mirrored RTL layout. Both languages use the locally hosted Vazirmatn font.
+- **Fixed navigation:** The header stays visible while scrolling. Its measured height sets the page padding and anchor offsets so section headings remain visible. The mobile menu closes after selection, on Escape, or when clicking outside the header.
+- **Interactive spotlight:** All seven projects appear in the spotlight, which starts with SafePlay. Browse with previous/next buttons, numbered choices, mouse hover, arrow keys, Home/End, scrolling, or horizontal touch swipes. There is no autoplay. Vertical scrolling can leave the preview at either end; zoom gestures remain available. The preview is tilted and straightens on hover or keyboard focus.
+- **Compact, equal-height project cards:** The grid uses three columns on wide screens, two on medium screens, and one on mobile. Every project card shares the tallest card's required height at the current layout, without a fixed oversized minimum or truncated descriptions. Image frames have consistent dimensions.
+- **Categorized skills:** Existing skills are grouped into programming languages, frontend, backend, AI and machine learning, game development, and tools.
+- **Certificates, resume, and contact:** The homepage includes certificates, a PDF resume download, GitHub, and an email contact section. Only configured social profiles are rendered.
+- **Accessible interactions:** A skip link, visible keyboard focus, labeled controls, screen-reader announcements for spotlight changes, and reduced-motion support are included.
+- **No framework or build step:** Serve the repository as static files. No package installation is required to run the site.
 
-- **Interactive theme switcher:** Choose from 8 available color themes, each with its own palette and visual identity.
-- **10 curated color palettes:** Includes PIM, Halloween, Oil, Twilight, Ice Cream, Late Night, Bitter Sweet, Mold, Watermelon, and Night Sky. Oil and Late Night are currently available as palette references but are not enabled in the theme picker.
-- **English / Persian language switch:** One click switches all text, theme names, and accessibility labels, and flips the layout to right-to-left for Persian.
-- **Persistent preferences:** Your selected theme and language are saved in `localStorage` and restored on your next visit, before the page first paints.
-- **Responsive design:** Adapts to desktop, tablet, and mobile screens.
-- **Personal introduction:** Hero section with a profile picture, introduction, and social links.
-- **About section:** Space for background, interests, skills, and goals.
-- **Details page:** A separate page for projects and certificates, with optional case studies. Missing information is shown as dashed placeholders until you fill it in.
-- **Resume download:** A dedicated section linking to a PDF resume.
-- **Accessible interactions:** Keyboard focus indicators, a skip-to-content link, and reduced-motion support.
-- **Component-based code:** Header, footer, cards, tags, and sections are small reusable JavaScript components, and all content lives in data files.
-- **No frameworks or build step:** Built with HTML, CSS, and vanilla JavaScript (ES modules).
+## Pages and projects
 
-## Built With
+The homepage contains the introduction, About, Skills, Projects, Certificates & learning, Resume, and Contact sections. `details.html` provides a separate projects-and-learning view. Optional case studies can be enabled through `FEATURES.caseStudies` in `js/config.js`.
 
-- HTML5
-- CSS3 — custom properties and responsive layouts
-- Vanilla JavaScript (ES modules)
-- Local Storage API
-- SVG icons
+The shared project data currently includes:
 
-## Getting Started
+1. Brain Tumor Classification
+2. RAG Assistant for Science Articles
+3. RAG Assistant for Khamenei.ir Content
+4. Story-Driven & Pixel-Art Games
+5. HTML, CSS & JavaScript Webpage Templates
+6. SafePlay Companion — Windows/mpv desktop companion
+7. Basalam Marketplace API — an independent, Basalam-inspired bootcamp backend using FastAPI and PostgreSQL
 
-### 1. Get your own copy
+SafePlay uses its actual dashboard screenshot. Basalam uses a Swagger UI screenshot showing its API documentation. The earlier Basalam checkout diagram is also retained as an alternative asset. Existing project screenshots and certificates remain in `assets/`.
 
-Fork this repository on GitHub, or clone it:
+## Run locally
+
+Clone the repository, then start any static HTTP server from its root:
 
 ```bash
 git clone https://github.com/samaneh-mirzaei/samaneh-mirzaei.github.io.git
+cd samaneh-mirzaei.github.io
+python -m http.server 8000
 ```
 
-### 2. Open the project
+Open [localhost:8000](http://localhost:8000). Alternatively, use `npx serve .` or your editor's Live Server extension.
 
-Open the folder in your preferred code editor, such as VS Code, and run it with a local development server. The JavaScript uses ES modules, which browsers block when a page is opened directly from disk (`file://`), so double-clicking `index.html` will show a blank page.
+The JavaScript uses ES modules, so opening `index.html` directly through `file://` may prevent the content from rendering.
 
-Any of these work:
+## Customize
 
-```bash
-npx serve .                  # Node
-python3 -m http.server       # Python
-```
+### Identity and contact
 
-or use the **Live Server** extension in VS Code.
+Edit `js/config.js` to change the English/Persian names, email address, social URLs, default language/theme, and optional feature flags. Leave an unused social URL empty to hide that profile. The email drives both contact links.
 
-### 3. Customize your portfolio
+### Translations
 
-**Personal information — `js/config.js`**
+Page text lives in `js/i18n/en.js` and `js/i18n/fa.js`. Use matching keys in both files. Missing Persian keys fall back to English. Translatable elements use `data-i18n` or `data-i18n-attr`.
 
-Update your name (English and Persian) and social links:
+### Add or update projects
 
-```javascript
-export const CONFIG = {
-  name: "Your Name",
-  nameFa: "نام شما",
-  social: {
-    github: "https://github.com/yourusername",
-    linkedin: "https://www.linkedin.com/in/yourusername",
-  },
-};
-```
+1. Put the cover image in `assets/projects/`.
+2. Add an entry to `js/data/projects.js` with a unique key, an `image` containing `src` and descriptive `alt`, a `tags` array, a `role` or translated `roleKey`, and optional `links`.
+3. Add `<key>.title` and `<key>.desc` in both translation files, plus the role translation when using `roleKey`.
 
-The name and social URLs are shared across both pages, so you don't need to update every link individually. If you don't need Persian, you can ignore `nameFa`, `js/i18n/fa.js`, and the language switch.
+The project card grid and spotlight are generated from the same array, so the new project appears on both pages and in the spotlight automatically. Missing project links and empty technology lists are omitted rather than displaying editing placeholders. Other optional components may still use placeholders for missing content.
 
-**Page text — `js/i18n/en.js` and `js/i18n/fa.js`**
+To change the initial spotlight selection, update the project key used in `js/components/ProjectSpotlight.js`.
 
-All text on the site lives in these two files, using the same keys. Replace the introduction, About section, interests, goals, resume text, and project descriptions in `en.js` with your own. Translate the same keys in `fa.js`; any key missing from `fa.js` falls back to English.
+### Skills, certificates, and navigation
 
-**Skills, projects, and certificates — `js/data/`**
+- `js/data/skills.js`: the source list of skills.
+- `js/data/skillGroups.js`: category membership, reusing the source skills list.
+- `js/data/certificates.js`: certificate images and titles. Issuer/date/verification rendering is currently commented out in `CertificateCard.js`.
+- `js/data/caseStudies.js`: optional case-study content.
+- `js/data/navigation.js`: links for each page.
+- `assets/profile.jpg` and `assets/resume.pdf`: profile image and downloadable resume.
 
-| File              | What it controls                                                        |
-| ----------------- | ----------------------------------------------------------------------- |
-| `skills.js`       | The skill tags in the About section                                     |
-| `projects.js`     | Project cards: image, tags, role, links                                 |
-| `certificates.js` | Certificate cards: image, issuer, date, verification link               |
-| `caseStudies.js`  | Optional case studies (turn on with `FEATURES.caseStudies` in `js/config.js`) |
-| `navigation.js`   | Header links for each page                                              |
-| `themes.js`       | Theme picker entries                                                    |
+### Themes and styling
 
-To add a project, add an entry to `projects.js` and its `d.pN.title` / `d.pN.desc` text to `en.js` (and `fa.js`). Leave `role` and `links` as `null` to show placeholders, or fill them in to replace the placeholders.
+Theme colors live in `css/base/themes.css`; the picker names and swatches live in `js/data/themes.js`. Keep their theme IDs aligned. Set `enabled: false` to hide a palette from the picker.
 
-**Profile picture, resume, and images**
+When changing the default theme, keep `DEFAULT_THEME` in `js/config.js`, the fallback in `js/theme-init.js`, and the `:root` palette in `css/base/themes.css` consistent. Saved visitor choices override the default.
 
-Replace these files with your own:
+Typography and shared tokens live in `css/base/tokens.css`. Component styles live in `css/components/`, with Persian adjustments in `css/rtl.css` and breakpoints in `css/responsive.css`. `css/style.css` imports these files in cascade order.
 
-- `assets/profile.jpg` — your profile picture.
-- `assets/resume.pdf` — your resume.
-- `assets/projects/` and `assets/certificates/` — thumbnails used by the details page.
+Preferences are saved under `portfolio-theme` and `portfolio-lang` in `localStorage`.
 
-Keep the filenames the same, or update the corresponding paths in `js/sections/Hero.js`, `js/sections/Resume.js`, and the files in `js/data/`.
-
-**Colors and styling — `css/`**
-
-Edit the CSS custom properties under the active PIM theme in `css/base/themes.css` to change the website's background, text, surfaces, accents, and other colors. Typography, radius, and max width are in `css/base/tokens.css`. Each component has its own stylesheet in `css/components/`.
-
-### 4. Customize the themes
-
-The theme definitions are split between `css/base/themes.css` and `js/data/themes.js`.
-
-To add or modify a theme:
-
-1. Define its semantic color variables in `css/base/themes.css` using a matching `data-theme` identifier.
-2. Add an entry to the `THEMES` array in `js/data/themes.js`, including its ID, English name, Persian name (`nameFa`), and palette colors.
-3. Use the same ID in both files.
-4. Test text contrast and check the theme across the page.
-
-The theme picker generates its color swatches from the JavaScript palette configuration. Theme selection is saved automatically using `localStorage`.
-
-To disable a theme, set `enabled: false` on its entry in `js/data/themes.js`. Keep the CSS palette definitions if you want to preserve them as references. This is how Oil and Late Night are currently hidden.
-
-### 5. Publish your own website
-
-You can adapt this project for your own GitHub Pages site.
-
-1. Create a repository named `yourusername.github.io` under your GitHub account.
-2. Upload your customized website files.
-3. Open **Settings → Pages**.
-4. Select your deployment branch and the repository root.
-5. Wait for GitHub Pages to publish your website.
-
-Your site will be available at `https://yourusername.github.io`.
-
-## Project Structure
+## Code structure
 
 ```text
-.
-├── index.html              # Home page shell (<head> + empty #app)
-├── details.html            # Projects & learning page shell
-├── css/
-│   ├── style.css           # Imports everything below, in cascade order
-│   ├── base/               # fonts, palettes, tokens, themes, reset
-│   ├── components/         # one stylesheet per component
-│   ├── rtl.css             # Persian typography
-│   └── responsive.css      # Breakpoints (last so they win)
-├── js/
-│   ├── main.js             # Entry: renders the page, starts features
-│   ├── theme-init.js       # Applies saved theme/language before first paint
-│   ├── config.js           # Name, social links, feature flags
-│   ├── data/               # Content: projects, certificates, skills, themes, ...
-│   ├── i18n/               # en.js, fa.js, and translation helpers
-│   ├── components/         # Reusable pieces: Header, Footer, Card, Tags, ...
-│   ├── sections/           # Page sections: Hero, About, Projects, ...
-│   ├── pages/              # Which sections make up each page
-│   ├── features/           # Behaviour: theme, language, scroll reveal
-│   └── utils/              # HTML escaping, safe localStorage
-└── assets/
-    ├── profile.jpg
-    ├── resume.pdf
-    ├── fonts/              # Vazirmatn (Persian)
-    ├── projects/
-    └── certificates/
+index.html / details.html       Thin HTML shells and SEO metadata
+js/main.js                      Renders the page and initializes behavior
+js/pages/                       Page composition
+js/sections/                    Hero, About, Skills, Projects, Learning, Resume, Contact
+js/components/                  Header, cards, spotlight, tags, and shared markup
+js/data/                        Projects, skills, categories, certificates, navigation, themes
+js/features/navigation.js       Fixed-header measurement and mobile menu
+js/features/spotlight.js        Project browsing, gestures, keyboard, and RTL behavior
+js/features/language.js         Translation and document direction
+js/features/theme.js            Theme picker and persistence
+js/features/reveal.js           One-time scroll reveals
+js/i18n/                        English/Persian text and translation helpers
+css/                            Tokens, palettes, component styles, RTL, breakpoints
+assets/                         Screenshots, certificates, font, profile image, resume
 ```
 
-## How It Works
+Each page renders its components into `#app`. The HTML keeps the title and description metadata, but page content requires JavaScript; a `noscript` notice is supplied.
 
-Each HTML page is a thin shell: `<body data-page="home">` and an empty `<div id="app">`. `js/main.js` looks up the page, renders its sections from components into `#app`, then starts the theme, language, and scroll-reveal features. Components are plain functions that return HTML strings, and every translatable element is tagged with a `data-i18n` key that the language switch swaps between `en.js` and `fa.js`.
+## Publish
 
-Because the content is rendered by JavaScript, the page body is empty for visitors or crawlers without JavaScript. The title and description stay in the HTML.
+This repository targets GitHub Pages at [samaneh-mirzaei.github.io](https://samaneh-mirzaei.github.io). In repository **Settings → Pages**, select the appropriate publishing source; a branch-based setup uses `main` and the repository root. No build command is needed. For a personal fork, update the identity, assets, links, and repository/site URLs.
 
-## Use and Customization
+## Credits
 
-You're welcome to use this project as a starting point for your own personal portfolio. Fork it, modify it, experiment with the palettes, change the layout, and add your own features.
-
-If you share your customized version publicly, a mention or link back to this repository would be appreciated, but the applicable license determines the permissions and conditions for reuse.
-
-## License
-
-See the repository's `LICENSE` file for the terms of use. If no license file is present, reuse and redistribution are not automatically granted by this README.
-
----
-
-Built with HTML, CSS, JavaScript, and a little creativity.
+The design polish used [unslop](https://heydamir.design/unslop) by Damir Sokolovsky ([@heydamir](https://x.com/heydamir)), licensed under CC BY 4.0. Vazirmatn is bundled locally for typography. Other project screenshots and certificate images retain their applicable rights. No repository-wide LICENSE file is currently included.

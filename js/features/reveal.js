@@ -1,8 +1,9 @@
-const REVEAL_SELECTOR = ".hero-text, .hero-photo, .card, .resume";
+const REVEAL_SELECTOR = ".about-grid, .skills-grid, .project-card, .resume, .contact-grid";
 
 /** Fade/slide elements in the first time they scroll into view. */
 export function initReveal() {
 	const items = document.querySelectorAll(REVEAL_SELECTOR);
+	if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 	items.forEach((el) => el.classList.add("reveal"));
 
 	if (!("IntersectionObserver" in window)) {

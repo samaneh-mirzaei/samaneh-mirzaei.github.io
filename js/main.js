@@ -5,6 +5,8 @@ import { HomePage } from "./pages/home.js";
 import { DetailsPage } from "./pages/details.js";
 import { initThemes } from "./features/theme.js";
 import { initLanguage } from "./features/language.js";
+import { initSpotlight } from "./features/spotlight.js";
+import { initNavigation } from "./features/navigation.js";
 import { initReveal } from "./features/reveal.js";
 
 const PAGES = {
@@ -19,5 +21,7 @@ if (app && PAGES[page]) {
 	app.innerHTML = PAGES[page]();
 	initThemes(); // before language: language fires an event the theme menu listens to
 	initLanguage();
+	initNavigation();
+	initSpotlight();
 	initReveal();
 }

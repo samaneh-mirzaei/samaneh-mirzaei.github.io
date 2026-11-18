@@ -15,21 +15,19 @@ const linkList = (links) =>
 		.join(", ");
 
 /** One project (data/projects.js). Title and description come from i18n. */
-export function ProjectCard({ key, image, tags, role, links }) {
+export function ProjectCard({ key, image, tags, role, roleKey, links }, index = 0) {
 	return Card({
 		tag: "article",
-		className: "proj",
+		className: `proj project-card project-${index + 1}`,
+		id: `project-${key.replaceAll(".", "-")}`,
 		children: `
-${image ? Thumb(image) : ""}
+${image ? `<div class="project-image"><span class="project-index" aria-hidden="true">${String(index + 1).padStart(2,"0")}</span>${Thumb(image)}</div>` : ""}
 <h3 ${i18n(`${key}.title`)}>${en(`${key}.title`)}</h3>
 <p ${i18n(`${key}.desc`)}>${en(`${key}.desc`)}</p>
-${Tags(tags, { emptyKey: "d.ph.tech" })}
+${tags?.length ? Tags(tags) : ""}
 ${MetaList([
-	{ labelKey: "d.role", value: role ? escapeHtml(role) : Placeholder("d.ph.role") },
-	{
-		labelKey: "d.links",
-		value: links?.length ? linkList(links) : Placeholder("d.ph.link"),
-	},
+	{ labelKey: "d.role", value: roleKey ? `<span ${i18n(roleKey)}>${en(roleKey)}</span>` : role ? escapeHtml(role) : Placeholder("d.ph.role") },
+	...(links?.length ? [{ labelKey: "d.links", value: linkList(links) }] : []),
 ])}`,
 	});
 }

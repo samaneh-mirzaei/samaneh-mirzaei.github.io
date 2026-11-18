@@ -1,3 +1,18 @@
+[data-theme="neo"] {
+  --bg: #F5F0E6;
+  --surface: #fffdf7;
+  --text: #151515;
+  --text-muted: #49463f;
+  --primary: #151515;
+  --on-primary: #F5F0E6;
+  --secondary: #FF5A36;
+  --highlight: #C6FF00;
+  --on-highlight: #151515;
+  --band: #151515;
+  --on-band: #F5F0E6;
+  color-scheme: light;
+}
+
 /* =========================================================
    THEMES — role mapping per palette (default: PIM).
    Roles: bg, surface, text, text-muted, primary (+on-), secondary (decor),
@@ -5,8 +20,7 @@
    Values with a trailing "d" comment are tints/shades derived from the
    palette for WCAG contrast.
    ========================================================= */
-:root,
-[data-theme="pim"] {
+:root, [data-theme="pim"] {
   --bg: #fcfbfc;
   --surface: #ffffff;
   --text: #302534;

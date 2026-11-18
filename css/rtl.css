@@ -1,11 +1,38 @@
-/* Persian (fa) typography. Direction-specific tweaks live next to each component. */
 html[lang="fa"] {
-  --font: "Vazirmatn", "Inter", system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
-  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Vazirmatn", Tahoma, serif;
+  --font:"Vazirmatn",Tahoma,sans-serif;
+  --font-display:"Vazirmatn",Tahoma,sans-serif
 }
-html[lang="fa"] body { line-height: 1.9; }
-html[lang="fa"] h1,
-html[lang="fa"] h2,
-html[lang="fa"] h3 { line-height: 1.4; }
-html[lang="fa"] .eyebrow { letter-spacing: 0; text-transform: none; }
-html[lang="fa"] .tagline { text-underline-offset: 0.3em; }
+
+html[lang="fa"] body {
+  line-height:1.8
+}
+
+html[lang="fa"] h1,html[lang="fa"] h2,html[lang="fa"] h3 {
+  letter-spacing:0;
+  line-height:1.3
+}
+
+html[lang="fa"] .eyebrow,html[lang="fa"] .nav-links a,html[lang="fa"] .btn,html[lang="fa"] .skill-heading h3,html[lang="fa"] .work-title {
+  letter-spacing:0
+}
+
+html[lang="fa"] .hero h1 {
+  font-size:clamp(56px,6vw,88px);
+  max-width:10ch
+}
+
+html[lang="fa"] .tags li {
+  font-size:12px
+}
+
+html[dir="rtl"] .directional {
+  transform:scaleX(-1)
+}
+
+html[lang="fa"] .contact h2 {
+  max-width:14ch
+}
+
+html[lang="fa"] .hero-strip {
+  direction:ltr
+}
