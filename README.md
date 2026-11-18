@@ -6,6 +6,8 @@ A bilingual English/Persian developer portfolio built with HTML, CSS, and vanill
 
 ## Project categories
 
+On tablet, category rows follow their own content height. On mobile, stacked categories and cards use natural heights, without desktop alignment spacers.
+
 All work lives under Projects in six bordered category blocks: AI & machine learning, backend, frontend, games, desktop tools, and 3D & animation. Blocks sit side by side, share the tallest block’s height, and stack on mobile. AI and artwork use wider blocks. Category jump links provide navigation. Assign each software project a `category` in `js/data/projects.js`; labels and ordering live in `js/data/projectCategories.js`.
 
 Software cards keep equal heights across categories. Flexible space before the skill tags and consistent role rows align the dividers. The layout remeasures after resizing, font loading, and language changes.
