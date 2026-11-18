@@ -7,7 +7,7 @@ html[lang="fa"] body {
   line-height:1.8
 }
 
-html[lang="fa"] h1,html[lang="fa"] h2,html[lang="fa"] h3 {
+html[lang="fa"] h1,html[lang="fa"] h2,html[lang="fa"] h3, html[lang="fa"] h4 {
   letter-spacing:0;
   line-height:1.3
 }

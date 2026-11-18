@@ -14,7 +14,7 @@
 }
 
 .proj-grid>.project-card {
-  height:100%;
+  height:var(--project-card-height,100%);
   min-height:0;
   padding:20px;
 }
@@ -30,7 +30,7 @@
 
 .project-image .thumb { height:100%; aspect-ratio:auto; }
 
-.project-card h3 {
+.project-card h4 {
   font-size:22px;
   letter-spacing:-.035em;
   line-height:1.12

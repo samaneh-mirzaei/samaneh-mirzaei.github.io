@@ -247,7 +247,7 @@
     grid-column:1/-1
   }
 
-  .project-card h3 {
+  .project-card h4 {
     font-size:24px
   }
 
@@ -402,7 +402,7 @@
     padding:12px
   }
 
-  .project-card h3 {
+  .project-card h4 {
     font-size:24px
   }
 

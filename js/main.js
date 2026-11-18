@@ -3,6 +3,8 @@
 // attach behaviour (themes, language, scroll reveal).
 import { HomePage } from "./pages/home.js";
 import { DetailsPage } from "./pages/details.js";
+import { initProjectHeights } from "./features/projectHeights.js";
+import { initArtVideo } from "./features/artVideo.js";
 import { initThemes } from "./features/theme.js";
 import { initLanguage } from "./features/language.js";
 import { initSpotlight } from "./features/spotlight.js";
@@ -24,4 +26,6 @@ if (app && PAGES[page]) {
 	initNavigation();
 	initSpotlight();
 	initReveal();
+	initArtVideo();
+	initProjectHeights();
 }

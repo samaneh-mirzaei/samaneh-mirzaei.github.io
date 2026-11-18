@@ -1,0 +1,23 @@
+.project-category-links { display:flex; flex-wrap:wrap; gap:8px; margin-block-end:32px; }
+.project-category-links a { padding:8px 12px; border:1px solid var(--text); font-size:13px; text-decoration:none; background:var(--surface); }
+.project-category-links a:hover { background:var(--highlight); color:var(--on-highlight); }
+.project-category-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; grid-auto-rows:1fr; align-items:stretch; }
+.project-category { height:100%; min-width:0; margin:0; padding:20px; border:2px solid var(--text); background:var(--surface); box-shadow:4px 4px 0 var(--text); }
+.project-category>h3 { font-size:22px; font-weight:600; line-height:1.4; margin:0 0 20px; padding-block-end:12px; border-block-end:1px solid var(--text); }
+.project-category-grid #projects-ai { grid-column:1/-1; }
+.project-category-grid #creative-work { grid-column:span 2; }
+.project-category-grid .project-category .proj-grid { grid-template-columns:minmax(0,1fr); gap:20px; }
+.project-category-grid #projects-ai .proj-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.project-category-grid .project-card, .project-category-grid .art-card { padding:0; border:0; box-shadow:none; background:transparent; }
+.project-category-grid .project-card:hover { transform:none; box-shadow:none; }
+.project-category-grid .art-grid { gap:20px; }
+.project-category-grid .art-heading { flex-wrap:wrap; gap:12px; }
+.project-category-grid .art-card h4 { font-size:22px; }
+.art-lede { color:var(--text-muted); font-size:14px; margin-block-end:20px; }
+@media(max-width:1100px) { .project-category-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .project-category-grid #projects-ai .proj-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:760px) { .project-category-grid { grid-template-columns:minmax(0,1fr); } .project-category-grid #creative-work { grid-column:auto; } .project-category-grid #projects-ai .proj-grid { grid-template-columns:minmax(0,1fr); } .project-category { padding:16px; } }
+
+.project-category>h3 { min-height:var(--category-heading-height,0px); }
+.project-category-grid .project-card>.tags { margin-block-start:auto; min-height:var(--project-tags-height,0px); align-content:start; }
+.project-category-grid .project-card>.meta { min-height:var(--project-meta-height,0px); align-content:start; }
+.project-category-grid .project-card:not(:has(>.tags))>.meta { margin-block-start:auto; }

@@ -1,0 +1,16 @@
+.art-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.art-card { display:flex; flex-direction:column; gap:16px; padding:20px; }
+.art-media { display:block; height:180px; flex:none; background:var(--bg); border:2px solid var(--text); overflow:hidden; }
+.art-media video,.art-media img { display:block; width:100%; height:100%; object-fit:contain; }
+.art-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.art-card h4 { font-size:24px; }
+.art-card p { font-size:15px; }
+.art-card .tags { margin-block-start:auto; }
+.art-play { flex:none; padding:8px 12px; background:var(--highlight); color:var(--on-highlight); border:2px solid var(--text); font-size:13px; }
+@media(max-width:760px) { .art-grid { grid-template-columns:minmax(0,1fr); } .art-heading { flex-wrap:wrap; } }
+
+/* Shared meta rows provide the divider after the skill tags. */
+.art-card>.tags { min-height:var(--project-tags-height,0px); align-content:start; }
+.art-card>.meta { min-height:var(--project-meta-height,0px); align-content:start; }
+
+.art-media { width:min(100%,var(--project-media-width,100%)); }

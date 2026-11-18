@@ -7,6 +7,7 @@
 export const PROJECTS = [
 	{
 		key: "d.p1",
+		category: "ai",
 		image: {
 			src: "assets/projects/brain-tumor-classification.jpg",
 			alt: "Screenshot of the brain tumor classification project",
@@ -17,6 +18,7 @@ export const PROJECTS = [
 	},
 	{
 		key: "d.p2",
+		category: "ai",
 		image: {
 			src: "assets/projects/rag-science-assistant.png",
 			alt: "Screenshot of the RAG assistant built on science articles",
@@ -27,6 +29,7 @@ export const PROJECTS = [
 	},
 	{
 		key: "d.p5",
+		category: "ai",
 		image: {
 			src: "assets/projects/rag-khamenei-assistant.jpg",
 			alt: "Screenshot of the RAG assistant built on Khamenei.ir content",
@@ -37,6 +40,7 @@ export const PROJECTS = [
 	},
 	{
 		key: "d.p3",
+		category: "games",
 		image: {
 			src: "assets/projects/pixel-game-example.jpg",
 			alt: "Screenshot of a pixel-art game",
@@ -47,6 +51,7 @@ export const PROJECTS = [
 	},
 	{
 		key: "d.p4",
+		category: "frontend",
 		image: {
 			src: "assets/projects/divar-temp-example.jpeg",
 			alt: "Preview of one of the HTML, CSS and JavaScript webpage templates",
@@ -57,6 +62,7 @@ export const PROJECTS = [
 	},
 	{
 		key: "d.p6",
+		category: "desktop",
 		image: {
 			src: "assets/projects/safeplay-dashboard.png",
 			alt: "SafePlay Companion dashboard with mpv playback status, guide search and content filters",
@@ -67,6 +73,7 @@ export const PROJECTS = [
 	},
 	{
 		key: "d.p7",
+		category: "backend",
 		image: {
 			src: "assets/projects/basalam-api-docs.png",
 			alt: "Basalam Marketplace Swagger documentation showing customer, authentication and administration endpoints",

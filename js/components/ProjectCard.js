@@ -22,7 +22,7 @@ export function ProjectCard({ key, image, tags, role, roleKey, links }, index = 
 		id: `project-${key.replaceAll(".", "-")}`,
 		children: `
 ${image ? `<div class="project-image"><span class="project-index" aria-hidden="true">${String(index + 1).padStart(2,"0")}</span>${Thumb(image)}</div>` : ""}
-<h3 ${i18n(`${key}.title`)}>${en(`${key}.title`)}</h3>
+<h4 ${i18n(`${key}.title`)}>${en(`${key}.title`)}</h4>
 <p ${i18n(`${key}.desc`)}>${en(`${key}.desc`)}</p>
 ${tags?.length ? Tags(tags) : ""}
 ${MetaList([
