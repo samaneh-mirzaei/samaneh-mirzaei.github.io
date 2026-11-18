@@ -14,3 +14,6 @@
 .art-card>.meta { min-height:var(--project-meta-height,0px); align-content:start; }
 
 .art-media { width:min(100%,var(--project-media-width,100%)); }
+
+/* Use the shared card height so auto spacing before skills aligns every role divider. */
+.project-category-grid .art-card { height:var(--project-card-height,auto); min-height:0; }

@@ -2,7 +2,7 @@ import { LANG_EVENT } from '../config.js';
 /** Equal card heights across category grids, measured from content rather than a fixed minimum. */
 export function initProjectHeights(){
   const section=document.getElementById('projects');
-  const cards=[...section?.querySelectorAll('.project-card')||[]];
+  const cards=[...section?.querySelectorAll('.project-card, .art-card')||[]];
   if(!cards.length)return;
   let pending=false,lastWidth=0;
   function measure(){
@@ -11,8 +11,8 @@ export function initProjectHeights(){
     if(mediaWidths.length)section.style.setProperty('--project-media-width',Math.min(...mediaWidths)+'px');
     ['--project-tags-height','--project-meta-height','--category-heading-height'].forEach(key=>section.style.removeProperty(key));
     const maxHeight=selector=>Math.ceil(Math.max(0,...[...section.querySelectorAll(selector)].map(el=>el.getBoundingClientRect().height)));
-    section.style.setProperty('--project-tags-height',maxHeight('.project-card>.tags')+'px');
-    section.style.setProperty('--project-meta-height',maxHeight('.project-card>.meta')+'px');
+    section.style.setProperty('--project-tags-height',maxHeight('.project-card>.tags, .art-card>.tags')+'px');
+    section.style.setProperty('--project-meta-height',maxHeight('.project-card>.meta, .art-card>.meta')+'px');
     section.style.setProperty('--category-heading-height',maxHeight('.project-category>h3')+'px');
     cards.forEach(card=>{card.style.height='auto';card.style.alignSelf='start';});
     const height=Math.ceil(Math.max(...cards.map(card=>card.getBoundingClientRect().height)));
