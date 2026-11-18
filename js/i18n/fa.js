@@ -102,7 +102,7 @@ export const FA = {
 	"nav.projects": "پروژه‌ها",
 	"nav.cases": "مطالعه‌های موردی",
 	"nav.learning": "یادگیری",
-	"about.more": "مشاهده‌ی پروژه‌ها، مطالعه‌های موردی و گواهی‌نامه‌ها ←",
+	"about.more": "مشاهده پروژه‌ها ←",
 
 	// ----- details.html -----
 	"d.meta.title": `پروژه‌ها و یادگیری | ${CONFIG.nameFa}`,

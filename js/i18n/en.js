@@ -88,7 +88,7 @@ export const EN = {
 	"about.background.title": "Background",
 	"about.background.text":
 		"I'm a Computer Engineering student with hands-on experience building AI-powered applications and full-stack systems for real clients. My projects include a deep learning and computer vision application for four-class brain tumor classification, achieving 98.99% overall accuracy, and two retrieval-augmented generation (RAG) systems developed for a startup. I also build small story-driven and pixel-art games and have created around 60 HTML, CSS, and JavaScript webpage templates.",
-	"about.more": "Explore projects, case studies & certificates →",
+	"about.more": "Explore projects →",
 	"about.interests.title": "Interests",
 	"about.interests.text":
 		"AI and game development are my main passions. I explore AI to build intelligent applications and use my frontend and backend skills to bring my ideas to life. Outside of coding, I enjoy gaming, art, and creating 2D animations and 3D assets with Blender.",

@@ -28,11 +28,11 @@ Software cards keep equal heights across categories. Flexible space before the s
 
 ## 3D & animation
 
-The 3D & animation block is nested inside Projects on both pages. It includes the mug-and-donut Blender render and the cat animation as a muted, looping, inline MP4. The animation plays while visible, pauses offscreen or in a hidden tab, and has a play/pause control. Reduced-motion preferences disable automatic playback. Both artwork cards include translated roles (Animator / 3D artist) below their skill tags and a matching divider. Their media frames are 180 px high and track the standard software image width without cropping. Artwork lives in `assets/art/`.
+The 3D & animation block is nested inside Projects on the homepage. It includes the mug-and-donut Blender render and the cat animation as a muted, looping, inline MP4. The animation plays while visible, pauses offscreen or in a hidden tab, and has a play/pause control. Reduced-motion preferences disable automatic playback. Both artwork cards include translated roles (Animator / 3D artist) below their skill tags and a matching divider. Their media frames are 180 px high and track the standard software image width without cropping. Artwork lives in `assets/art/`.
 
 ## Pages and projects
 
-The homepage contains the introduction, About, Skills, Projects, Certificates & learning, Resume, and Contact sections. `details.html` provides a separate projects-and-learning view. Optional case studies can be enabled through `FEATURES.caseStudies` in `js/config.js`.
+The homepage contains the introduction, About, Skills, Projects, Certificates & learning, Resume, and Contact sections. `details.html` is a legacy redirect to the homepage; existing section hashes are preserved. Optional case studies can be enabled through `FEATURES.caseStudies` in `js/config.js`.
 
 The shared project data currently includes:
 
@@ -68,7 +68,7 @@ Edit `js/config.js` to change the English/Persian names, email address, social U
 
 ### Translations
 
-Page text lives in `js/i18n/en.js` and `js/i18n/fa.js`. Use matching keys in both files. Missing Persian keys fall back to English. Translatable elements use `data-i18n` or `data-i18n-attr`.
+All portfolio content is served from `index.html`. Page text lives in `js/i18n/en.js` and `js/i18n/fa.js`. Use matching keys in both files. Missing Persian keys fall back to English. Translatable elements use `data-i18n` or `data-i18n-attr`.
 
 ### Add or update projects
 
@@ -76,7 +76,7 @@ Page text lives in `js/i18n/en.js` and `js/i18n/fa.js`. Use matching keys in bot
 2. Add an entry to `js/data/projects.js` with a unique key, a `category` matching `js/data/projectCategories.js`, an `image` containing `src` and descriptive `alt`, a `tags` array, a `role` or translated `roleKey`, and optional `links`.
 3. Add `<key>.title` and `<key>.desc` in both translation files, plus the role translation when using `roleKey`.
 
-The project card grid and spotlight are generated from the same array, so the new project appears on both pages and in the spotlight automatically. Missing project links and empty technology lists are omitted rather than displaying editing placeholders. Other optional components may still use placeholders for missing content.
+The project card grid and spotlight are generated from the same array, so the new project appears on the homepage and in the spotlight automatically. Missing project links and empty technology lists are omitted rather than displaying editing placeholders. Other optional components may still use placeholders for missing content.
 
 To change the initial spotlight selection, update the project key used in `js/components/ProjectSpotlight.js`.
 

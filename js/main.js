@@ -2,7 +2,6 @@
 // empty <div id="app">; we render that page's components into it, then
 // attach behaviour (themes, language, scroll reveal).
 import { HomePage } from "./pages/home.js";
-import { DetailsPage } from "./pages/details.js";
 import { initProjectHeights } from "./features/projectHeights.js";
 import { initArtVideo } from "./features/artVideo.js";
 import { initThemes } from "./features/theme.js";
@@ -13,7 +12,6 @@ import { initReveal } from "./features/reveal.js";
 
 const PAGES = {
 	home: HomePage,
-	details: DetailsPage,
 };
 
 const page = document.body.dataset.page || "home";
